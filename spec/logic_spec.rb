@@ -29,3 +29,14 @@ describe CheckWinning do
     end
   end
 end
+
+describe CheckPosition do
+    describe '#check_input' do
+        it 'should return true if the input is between 1 and 9' do
+            expect(subject.check_input(9)).to eql(true)
+        end
+        it 'should return false if the input is not between 1 and 9' do
+            expect(subject.check_input(11)).to be_falsey 
+        end
+    end
+end
