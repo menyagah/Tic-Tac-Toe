@@ -49,3 +49,19 @@ describe CheckPosition do
     end
   end
 end
+
+describe Board do
+  describe '#draw_board' do
+    it 'should print the game board' do
+      msg = <<~PUBLISHED
+        1 | 2 | 3
+        ----------
+        4 | 5 | 6
+        ----------
+        7 | 8 | 9
+      PUBLISHED
+
+      expect { subject.draw_board([1, 2, 3, 4, 5, 6, 7, 8, 9]) }.to output(msg).to_stdout
+    end
+  end
+end
