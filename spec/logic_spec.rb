@@ -11,4 +11,10 @@ describe CheckWinning do
       expect(subject.check_win('x')).to eql(false)
     end
   end
+
+  describe '#check_the_winer' do
+        it 'should return a string with the name of the player that is passed as an argument' do
+            expect(subject.check_the_winer('Martin')).to eql("congratulation Martin you won the game")
+        end
+    end
 end
