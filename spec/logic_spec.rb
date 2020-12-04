@@ -38,7 +38,7 @@ describe CheckPosition do
     it 'should return false if the input is not between 1 and 9' do
       expect(subject.check_input(11)).to be_falsey
     end
-  end 
+  end
 
   describe '#check_position' do
     it 'should return true if the input is an integer' do
