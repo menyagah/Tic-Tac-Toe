@@ -13,19 +13,19 @@ describe CheckWinning do
   end
 
   describe '#check_the_winer' do
-        it 'should return a string with the name of the player that is passed as an argument' do
-            expect(subject.check_the_winer('Martin')).to eql("congratulation Martin you won the game")
-        end
+    it 'should return a string with the name of the player that is passed as an argument' do
+      expect(subject.check_the_winer('Martin')).to eql('congratulation Martin you won the game')
     end
+  end
 
-    describe '#check_draw' do
-        it 'should return true no one wins' do
-            subject.positions = ['x','o','x','o','x','x','o','x','o']
-            expect(subject.check_draw('x')).to eql(true)
-        end
-        it 'should return true no one wins' do
-            subject.positions = ['x','x','x','o','x','x','o','x','o']
-            expect(subject.check_draw('x')).to eql(false)
-        end
-    end  
+  describe '#check_draw' do
+    it 'should return true no one wins' do
+      subject.positions = %w[x o x o x x o x o]
+      expect(subject.check_draw('x')).to eql(true)
+    end
+    it 'should return true no one wins' do
+      subject.positions = %w[x x x o x x o x o]
+      expect(subject.check_draw('x')).to eql(false)
+    end
+  end
 end
