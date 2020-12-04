@@ -17,4 +17,15 @@ describe CheckWinning do
             expect(subject.check_the_winer('Martin')).to eql("congratulation Martin you won the game")
         end
     end
+
+    describe '#check_draw' do
+        it 'should return true no one wins' do
+            subject.positions = ['x','o','x','o','x','x','o','x','o']
+            expect(subject.check_draw('x')).to eql(true)
+        end
+        it 'should return true no one wins' do
+            subject.positions = ['x','x','x','o','x','x','o','x','o']
+            expect(subject.check_draw('x')).to eql(false)
+        end
+    end  
 end
