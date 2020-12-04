@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../lib/logic.rb'
+require_relative '../lib/logic'
 positions = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 def starting_of_thegame
